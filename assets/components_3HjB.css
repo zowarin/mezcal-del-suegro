@@ -1,0 +1,141 @@
+.site-header {
+    position: sticky;
+    z-index: 20;
+    top: 0;
+    border-bottom: 1px solid var(--gray-200);
+    background: rgba(255,255,255,.94);
+    backdrop-filter: blur(.75rem);
+}
+
+.header-inner, .footer-inner {
+    display: flex;
+    min-height: 4.5rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.custom-logo {
+    width: auto;
+    max-height: 3rem;
+}
+
+.site-title {
+    color: var(--text);
+    font-weight: 750;
+    text-decoration: none;
+}
+
+.primary-navigation ul, .site-footer ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 1.25rem;
+    list-style: none;
+}
+
+.primary-navigation a, .site-footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.menu-toggle {
+    display: none;
+    padding: .5rem;
+    border: 0;
+    background: transparent;
+}
+
+.menu-toggle span[aria-hidden] {
+    display: block;
+    width: 1.5rem;
+    height: 2px;
+    margin: .3rem;
+    background: currentColor;
+}
+
+.button {
+    display: inline-flex;
+    padding: .75rem 1.1rem;
+    border-radius: var(--rounded-md);
+    color: #fff;
+    background: var(--primary);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.button:hover {
+    color: #fff;
+    background: var(--gray-900);
+}
+
+.card, .entry-card {
+    padding: var(--space-md);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--rounded-md);
+    background: var(--white);
+    box-shadow: none;
+}
+
+.entry-card + .entry-card {
+    margin-top: var(--space-md);
+}
+
+.go-top {
+    position: fixed;
+    z-index: 15;
+    right: 1rem;
+    bottom: 1rem;
+    display: grid;
+    width: 2.75rem;
+    height: 2.75rem;
+    place-items: center;
+    border-radius: 50%;
+    color: #fff;
+    background: var(--primary);
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(.5rem);
+    transition: .2s ease;
+}
+
+.go-top.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+}
+
+.site-footer {
+    border-top: 1px solid var(--gray-200);
+}
+
+@media (max-width: 47.99rem) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .primary-navigation {
+        display: none;
+        position: absolute;
+        inset: 100% 0 auto;
+        padding: 1rem;
+        border-bottom: 1px solid var(--gray-200);
+        background: var(--white);
+    }
+
+    .primary-navigation.is-open {
+        display: block;
+    }
+
+    .primary-navigation ul {
+        flex-direction: column;
+    }
+
+    .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        padding-block: 1.5rem;
+    }
+
+}

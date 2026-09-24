@@ -1,0 +1,68 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--text);
+    background: var(--white);
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--primary);
+    text-underline-offset: .2em;
+}
+
+a:hover {
+    color: var(--gray-900);
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    margin-block: 0 .6em;
+    line-height: 1.15;
+    text-wrap: balance;
+}
+
+h1 {
+    font-size: var(--h1);
+}
+
+h2 {
+    font-size: var(--h2);
+}
+
+h3 {
+    font-size: var(--h3);
+}
+
+p {
+    margin-block: 0 1em;
+}
+
+button, input, textarea, select {
+    font: inherit;
+}
+
+h4 {
+    font-size: var(--h4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+}

@@ -1,0 +1,34 @@
+.hero {
+    display: grid;
+    min-height: min(42rem, 80vh);
+    align-items: center;
+    background: linear-gradient(135deg, var(--light), var(--gray-200));
+}
+
+.hero p {
+    max-width: 40rem;
+    font-size: 1.15rem;
+}
+
+.eyebrow {
+    color: var(--primary);
+    font-size: .8rem;
+    font-weight: 800;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.section-muted {
+    background: var(--light);
+}
+
+.callout {
+    color: #fff;
+    background: var(--text);
+    text-align: center;
+}
+
+.callout .button {
+    background: #fff;
+    color: var(--text);
+}

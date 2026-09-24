@@ -1,0 +1,34 @@
+.container {
+    width: min(calc(100% - 2rem), var(--container-lg));
+    margin-inline: auto;
+}
+
+.content-narrow {
+    width: min(calc(100% - 2rem), var(--container-sm));
+}
+
+.section {
+    padding-block: var(--space-lg);
+}
+
+.grid {
+    display: grid;
+    gap: var(--space-md);
+}
+
+.split {
+    display: grid;
+    gap: var(--space-md);
+    align-items: center;
+}
+
+@media (min-width: 48rem) {
+    .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .split {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
